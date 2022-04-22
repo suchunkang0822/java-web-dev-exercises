@@ -1,4 +1,4 @@
-package exercises;
+package exercises_1;
 
 public class SearchText {
     public static boolean search(String text,String search){

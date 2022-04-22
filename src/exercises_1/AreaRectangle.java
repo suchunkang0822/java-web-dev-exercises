@@ -1,4 +1,4 @@
-package exercises;
+package exercises_1;
 import java.util.Scanner;
 
 public class AreaRectangle {

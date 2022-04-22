@@ -28,7 +28,7 @@ public class HashMapGradebook {
                 // Read in the newline before looping back
                 input.nextLine();
             }
-
+//            System.out.println(newStudent);
         } while(!newStudent.equals(""));
 
         // Print class roster
