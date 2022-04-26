@@ -9,6 +9,8 @@ public class HouseCat extends Cat {
         name = aName;
     }
 
+    public HouseCat(String aName){name = aName;}
+
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
     }

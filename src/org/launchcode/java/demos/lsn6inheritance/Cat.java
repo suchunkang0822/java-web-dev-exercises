@@ -1,10 +1,11 @@
 package org.launchcode.java.demos.lsn6inheritance;
 
 public class Cat {
-
+    private final static int hey = 69;
     private boolean tired = false;
     private boolean hungry = false;
     private double weight;
+
 
     // The biological family for all cat species
     private String family = "Felidae";
@@ -12,6 +13,8 @@ public class Cat {
     public Cat (double aWeight) {
         weight = aWeight;
     }
+
+    public Cat(){weight = 13;}
 
     /**** Getters and Setters ****/
 
@@ -65,4 +68,8 @@ public class Cat {
     public String noise () {
         return "Meeeeeeooooowww!";
     }
+
+//    public static void main(String[] args) {
+//        System.out.println(Cat.hey);
+//    }
 }

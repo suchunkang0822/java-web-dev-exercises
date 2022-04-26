@@ -31,20 +31,23 @@ public class Practice {
 
     }
     public static void main(String[] args) {
-        ArrayList<String> e = new ArrayList<>();
-        e.add("one");
-        e.add("two");
-        e.add("three");
+        int[] empty = {};
+        System.out.println(empty[0]);
 
-        ArrayList<String> w = new ArrayList<>();
-        w.add("one");
-        w.add("two");
-        w.add("three");
-
-        int[] a = {1,2,3,4,5};
-//        System.out.println(Arrays.toString(e).equals(Arrays.toString(w)));
-        e.remove(0);
-        System.out.println(e);
+//        ArrayList<String> e = new ArrayList<>();
+//        e.add("one");
+//        e.add("two");
+//        e.add("three");
+//
+//        ArrayList<String> w = new ArrayList<>();
+//        w.add("one");
+//        w.add("two");
+//        w.add("three");
+//
+//        int[] a = {1,2,3,4,5};
+////        System.out.println(Arrays.toString(e).equals(Arrays.toString(w)));
+//        e.remove(0);
+//        System.out.println(e);
 
 //        Practice example = new Practice("John");
 //        Practice example2 = new Practice("John");

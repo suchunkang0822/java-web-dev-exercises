@@ -20,7 +20,7 @@ public class Menu {
         menu.put("dessert",dessert);
     }
 
-    public boolean menuCheck(MenuItem item){
+    private boolean menuCheck(MenuItem item){
         for(MenuItem itemInMenu: menu.get(item.getCategory())){
             if(item.equals(itemInMenu)){
                 return true;
@@ -30,7 +30,7 @@ public class Menu {
     }
 
 
-    public void addMenu(MenuItem item){
+    private void addMenu(MenuItem item){
 
         if(item.getCategory().equals("appetizer")){
             if(!menuCheck(item)){
@@ -54,15 +54,21 @@ public class Menu {
         this.updated_time = LocalDateTime.now();
 
     }
-    public void removeMenu(MenuItem item){
+    private void removeMenu(MenuItem item){
         int counter = 0;
         String item_category = item.getCategory();
-        for (MenuItem itemInArrayList : menu.get(item_category)) {
+        ArrayList<MenuItem> list = menu.get(item_category);
+        for (MenuItem itemInArrayList : list) {
             if (item.equals(itemInArrayList)) {
-                menu.get(item_category).remove(counter);
+                break;
+//                list.remove(counter);
+//                System.out.println("WWWHAT");
+//                System.out.println(appetizer == null);
             }
             counter++;
         }
+        list.remove(counter);
+        updated_time = LocalDateTime.now();
 
     }
 
@@ -77,6 +83,11 @@ public class Menu {
                 System.out.println("*****"+"\n");
             }
         }
+        System.out.println("Last updated: "+updated_time);
+    }
+
+    public void printLastUpdate(){
+        System.out.println(updated_time);
     }
 
     public static void main(String[] args) {
@@ -90,7 +101,13 @@ public class Menu {
         ItalianKitchen.addMenu(pizza);
         ItalianKitchen.addMenu(pie);
 
+//        ItalianKitchen.print();
+
+//        ItalianKitchen.menu.get("appetizer").remove(0);
+        ItalianKitchen.removeMenu(salad);
+
         ItalianKitchen.print();
+
     }
 
 
